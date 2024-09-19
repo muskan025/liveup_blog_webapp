@@ -1,0 +1,58 @@
+@import '../../../styles/var';
+
+.calendar_list {
+    position: absolute;
+    top:60px;
+    background-color: white;
+    box-shadow: 1px 0px 10px 4px black;
+    border-radius: 20px;
+    padding: 2px;
+
+    li{
+        display: block;
+        padding: 2px 4px;
+
+        &:hover{
+            opacity: 0.9;
+        }
+
+        a{
+            display: flex;
+            gap:8px;
+            align-items: center;
+            color: black;
+            text-align: left;
+            font-weight: $f-s;
+            white-space: nowrap;
+            
+            svg,img{
+                width:30px;
+                height: 30px;
+            }
+
+            img+img{
+                border:1px solid red;
+                width:40px;
+                height: 40px;
+            }
+           
+        }
+     }
+} 
+
+.opacity1 {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.opacity0 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s ease-in-out;
+}
+
+@media (max-width:768px) {
+    .calendar_list{
+        top: -150px;
+    }
+}

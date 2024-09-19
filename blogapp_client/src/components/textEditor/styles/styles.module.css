@@ -1,0 +1,163 @@
+/* colors */
+/* font */
+/* spacers */
+/* Breakpoints */
+.hide_content {
+  background: #1D1D1D;
+  width: 100%;
+  height: 200px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.editor_wrapper {
+  margin-bottom: 60px;
+}
+
+.editor_container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  min-height: 100vh;
+}
+.editor_container .popup_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.editor_container .popup {
+  width: 50%;
+}
+.editor_container .publish {
+  position: fixed;
+  top: 90px;
+  align-self: flex-end;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+.editor_container .publish button {
+  margin: 0;
+}
+.editor_container .text_editor {
+  width: 100%;
+  max-width: 920px;
+  padding: 15px 30px;
+  background-color: #2B2B2B;
+  min-height: calc(100vh - 90px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+.editor_container .text_editor .header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+}
+.editor_container .text_editor .header input, .editor_container .text_editor .header .create_blog_file {
+  background-color: transparent;
+  padding: 10px 5px;
+  margin: 0;
+  text-align: center;
+}
+.editor_container .text_editor .header input::-moz-placeholder, .editor_container .text_editor .header .create_blog_file::-moz-placeholder {
+  font-size: 16px;
+  text-align: center;
+}
+.editor_container .text_editor .header input::placeholder, .editor_container .text_editor .header .create_blog_file::placeholder {
+  font-size: 16px;
+  text-align: center;
+}
+.editor_container .text_editor .header .title_container > input {
+  font-size: clamp(28px, 5vw, 40px);
+}
+.editor_container .text_editor .header .title_container, .editor_container .text_editor .header .readtime_container, .editor_container .text_editor .header .thumbnail_container {
+  position: relative;
+}
+.editor_container .text_editor .header .title_container:after, .editor_container .text_editor .header .readtime_container:after, .editor_container .text_editor .header .thumbnail_container:after {
+  bottom: 0;
+  content: "";
+  position: absolute;
+  height: 0.3px;
+  background-color: grey;
+  width: 100%;
+  left: 0;
+}
+.editor_container .text_editor .header img {
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.editor_container .text_editor .header .no_underline::after {
+  opacity: 0;
+}
+.editor_container .text_editor .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.editor_container .text_editor .content :global(.quill) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #d9d9d9;
+}
+.editor_container .text_editor .content :global(.quill) :global(.ql-toolbar.ql-snow) {
+  position: fixed;
+  top: 145px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #2B2B2B;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 70%;
+  max-width: 920px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+.editor_container .text_editor .content :global(.quill) :global(.ql-editor) {
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+.editor_container .text_editor .content :global(.quill) :global(.ql-container.ql-snow) {
+  border: none;
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .text_editor {
+    padding: 15px;
+  }
+  :global(.ql-toolbar.ql-snow) {
+    padding: 15px;
+    top: 140px;
+  }
+}
+@media (max-width: 425px) {
+  .editor_container .text_editor .header {
+    padding-top: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .editor_container .text_editor .header {
+    padding-top: 200px;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

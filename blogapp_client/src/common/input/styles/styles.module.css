@@ -1,0 +1,116 @@
+/* colors */
+/* font */
+/* spacers */
+/* Breakpoints */
+h2 {
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+h2:before {
+  background-color: #f67280;
+  display: block;
+  position: absolute;
+  content: "";
+  left: auto;
+  top: -2px;
+  width: 30px;
+  height: 2px;
+}
+
+.input {
+  padding: 15px 20px;
+  font-size: clamp(13px, 2vw, 15px);
+  width: 100%;
+  font-family: inherit;
+  border-radius: 20px;
+  background-color: #1D1D1D;
+  border: none;
+  outline: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.input::-moz-placeholder {
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+.input::placeholder {
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+.file_input_container {
+  position: relative;
+  width: 100%;
+}
+
+.file_input {
+  opacity: 0;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
+.file_input_label {
+  position: absolute;
+  left: 20px;
+  text-wrap: nowrap;
+}
+
+.image_icon {
+  font-size: 19px;
+  vertical-align: middle;
+}
+
+.create_blog_file {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.create_blog_file input::-moz-placeholder {
+  font-size: 16px;
+  color: #d9d9d9;
+}
+.create_blog_file input::placeholder {
+  font-size: 16px;
+  color: #d9d9d9;
+}
+.create_blog_file label {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn {
+  border-radius: clamp(15px, 2vw, 20px);
+  border: 1px solid transparent;
+  padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2.5vw, 20px);
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #F67280;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-top: clamp(20px, 3vw, 30px);
+}
+.btn:hover {
+  border: 1px solid #F67280;
+  background-color: #1D1D1D;
+}
+
+.error {
+  font-size: clamp(11px, 1.8vw, 13px);
+  text-decoration-line: spelling-error;
+}/*# sourceMappingURL=styles.module.css.map */

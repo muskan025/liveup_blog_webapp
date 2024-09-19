@@ -1,0 +1,130 @@
+
+@import "../../../styles/var";
+@import "../../../styles/mixin";
+
+.navbar{
+    padding-inline: $padding-inline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: $bg-color;
+    width: 100%;
+    position: fixed; 
+    z-index: 10;
+    top:0; 
+    opacity: 0.7; 
+  } 
+
+.brandname{
+font-size: 2rem;
+color: $primary-accent;  
+font-style:oblique;
+font-weight: 600;
+} 
+ 
+.blogname{
+    color: $white;
+}
+ 
+.nav_links_center{
+    display: flex;
+    gap:30px;
+}
+
+[class*="nav_links"], .nav_links {
+    font-size: $text-s;
+    font-weight: 700;
+}
+ 
+.profile_hamburger{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile_img{
+    width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: grey;
+    overflow: hidden;
+ 
+    img{ 
+        height: 100%;
+        width: 100%; 
+      }
+    a{
+        margin: 0;
+    }
+ 
+    .defaultProfile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+         color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+       }
+}
+
+.active_Link{
+    color: $primary-accent;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media (max-width:768px){
+    .hamburger{
+        display: inline-block;
+        font-size: x-large;
+    }
+    .nav_links_center{
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    gap: 10px;
+    background-color: $dark-theme;
+    padding: 10px ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: right 0.5s ease-in-out;
+      .active_Link{
+        color: $primary-accent;
+    }
+    }
+
+.close_menu{
+    right:-100%;
+    animation : close_menu_slide 0.5s ease-in-out;
+}
+.open_menu{
+    animation : open_menu_slide 0.5s ease-in-out;
+ }
+
+@keyframes close_menu_slide {
+    0%{
+  right:0%;
+    }
+    
+    100%{
+        right:-100%;
+    }
+
+}
+    @keyframes open_menu_slide {
+        0%{
+            right:-100%;     
+           }
+        
+        100%{
+            right:0%;    
+            }
+
+    }
+    
+}

@@ -1,0 +1,367 @@
+@import "./var" ;
+@import "./mixin" ;
+  
+  
+  *,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body { 
+     background-color: $dark-theme;
+    color: $f-color;
+    font-family:  Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .main_content_wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toast_container {
+    font-size: $text-s;
+  }
+  
+  input{
+    caret-color: $primary-accent
+  }
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: $dark-theme;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  
+  &:hover{
+    cursor: grab;
+  }
+  &:active{
+    cursor: grabbing;
+  }
+ }
+
+::-webkit-scrollbar-button {
+  background-color: $dark-theme;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+ 
+  .wrapper{
+    flex:1;
+    padding-block: 145px 60px;
+  }
+.home{
+    padding: 0 0 60px 0;
+ }
+  a {
+    color:  $white;
+    text-decoration: inherit;
+    margin:$margin-sm;
+  }
+   
+  a:hover{
+    color: $primary-accent;
+  } 
+ 
+h1 {
+  font-size: $heading-h1;
+  line-height: 1.4;
+ }
+
+ img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  color: inherit;
+  font-weight: $text-xxs;
+  }
+
+ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+.btn {
+  border-radius: clamp(15px, 2vw, 20px);
+  border: 1px solid transparent;
+  padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2.5vw, 20px);
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 600;
+  font-family: inherit;
+  background-color: $primary-accent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-top: clamp(20px, 3vw, 30px);
+
+  &:hover{
+    border: 1px solid $primary-accent;
+    background-color: $dark-theme;
+    }
+}
+
+.form_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+ padding-inline: 40px;
+}
+
+.form_sub_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 644px;
+ max-width: 100%;
+ background-color: $bg-color;
+ border-radius: 20px; 
+ padding: 30px;
+ color: $f-color;
+
+ p{
+  font-size: $text-s;
+  text-align: center;
+}
+
+.error{
+  text-decoration-line: spelling-error;
+    margin-bottom: 10px;
+}
+
+a{
+  font-weight: $f-xs;
+}
+}
+
+.explore_blogs {
+  width: 81vw;
+  margin-inline: auto;
+  text-align: center; /* Center all text content */
+
+  .searchbar {
+    padding: 20px 20px 0 20px;
+    border-radius: 20px;
+    background: #2B2B2B;
+    margin-bottom: 40px;  
+     
+  }
+
+  .explore_content{
+    display: flex;
+    flex-direction: column;
+  }
+  
+   .niche_name {
+    color: #F67280;
+  }
+  
+    h2{
+    margin-bottom: 20px; 
+    align-self: flex-start; 
+
+    &::before{
+      background:none;
+    }
+  }
+
+  
+    p {
+    max-width: 800px;  
+    margin: 0 auto 40px;  
+    line-height: 1.6;
+    text-wrap: pretty;
+    font-size: $text-s;  
+  }
+  
+  b {
+    display: block;  
+    margin-top: 20px;  
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    & {
+      width: 90vw; /* Slightly wider on smaller screens */
+    }
+    
+      p {
+       padding: 0 15px; /* Add some padding on smaller screens */
+    }
+  }
+}
+
+ 
+
+.user_profile{
+  
+  .settings{
+    display: grid; 
+    background: #2B2B2B;
+    border-radius: 20px;
+    width: 150px;
+     max-width: 200px; 
+    padding: 4px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 50px;
+      
+     .settings_header{
+      padding: 5px 10px;
+      background:  $bg-color;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: auto;
+      cursor: pointer;
+      border-radius: 10px;
+      position: relative;
+
+      span{
+        font-size: $text-s;
+        margin-right: 10px;
+       }
+      .icon{
+        font-size: 1.3rem;
+      }
+    }
+
+    .underline{
+      padding: 0.8px;
+      background-color: gray;
+      position: absolute;
+      width: 90%;
+      bottom: -3px;
+    }
+
+    .options_container{
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      max-height: 0;
+    }
+    .options{
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+ 
+    &:hover{
+      opacity: 0.5;
+    }
+ 
+    &:nth-child(1) {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 5%;
+        bottom: 0;
+        width: 90%;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.5);  
+       }
+    }
+  }
+
+  &:hover{
+    max-height: 200px;
+  }
+  &:hover .options_container{
+     max-height: 200px;
+  }
+ 
+  .underline{
+    padding: 0.8px;
+    background-color: gray;
+    position: absolute;
+    width: 90%;
+     top:5px;
+  }
+
+  }
+ 
+  .user_blogs{
+    .empty_section{
+      display: flex;
+      gap:10px;
+      justify-content: center;
+      align-items: baseline;
+    }
+    
+    h2::before{
+      background: none;
+    }
+    .empty_blog{
+      font-weight: bold;
+      font-size: $heading-h2;
+    }
+  }
+
+}
+.error_page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:30px; 
+
+  img{
+    max-width: 440px;
+  }
+  p{
+    font-size: clamp(20px, 6vw, 40px);
+    font-weight: $f-xs;
+    text-wrap: balance;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px){
+ 
+  .settings{
+    border-radius: 50%;
+    width: 40px !important;
+     max-width: none;
+     justify-content: center;
+    }
+    .open_settings{
+      width:114px !important;
+    }
+
+  .settings_header span{
+    display: none;
+  }
+
+  .toast_container{
+   width: 70vw !important;
+      left: 10px !important;
+      right: 10px !important;
+       margin-bottom: 1rem;
+       }
+   
+ 
+}

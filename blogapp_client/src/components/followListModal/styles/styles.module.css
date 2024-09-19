@@ -1,0 +1,54 @@
+/* colors */
+/* font */
+/* spacers */
+/* Breakpoints */
+.followlist_container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2B2B2B;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 385px;
+  padding: 10px;
+  font-size: clamp(11px, 1.8vw, 13px);
+}
+.followlist_container p {
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+  border-bottom: 0.5px solid #d9d9d9;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.followlist_container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+.followlist_container ul li a {
+  margin: 0;
+}
+.followlist_container ul li a:hover {
+  color: #d9d9d9;
+}
+.followlist_container ul li .btn {
+  display: flex;
+  align-items: center;
+  background-color: #1D1D1D;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.followlist_container ul li .btn:hover {
+  opacity: 0.8;
+}
+.followlist_container ul li img {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}/*# sourceMappingURL=styles.module.css.map */

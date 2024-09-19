@@ -1,0 +1,121 @@
+/* colors */
+/* font */
+/* spacers */
+/* Breakpoints */
+.navbar {
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2B2B2B;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  opacity: 0.7;
+}
+
+.brandname {
+  font-size: 2rem;
+  color: #F67280;
+  font-style: oblique;
+  font-weight: 600;
+}
+
+.blogname {
+  color: rgba(255, 255, 255, 0.8705882353);
+}
+
+.nav_links_center {
+  display: flex;
+  gap: 30px;
+}
+
+[class*=nav_links], .nav_links {
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 700;
+}
+
+.profile_hamburger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile_img {
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: grey;
+  overflow: hidden;
+}
+.profile_img img {
+  height: 100%;
+  width: 100%;
+}
+.profile_img a {
+  margin: 0;
+}
+.profile_img .defaultProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.active_Link {
+  color: #F67280;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+    font-size: x-large;
+  }
+  .nav_links_center {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    gap: 10px;
+    background-color: #1D1D1D;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: right 0.5s ease-in-out;
+  }
+  .nav_links_center .active_Link {
+    color: #F67280;
+  }
+  .close_menu {
+    right: -100%;
+    animation: close_menu_slide 0.5s ease-in-out;
+  }
+  .open_menu {
+    animation: open_menu_slide 0.5s ease-in-out;
+  }
+  @keyframes close_menu_slide {
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: -100%;
+    }
+  }
+  @keyframes open_menu_slide {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+}/*# sourceMappingURL=styles.module.css.map */

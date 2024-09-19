@@ -1,0 +1,82 @@
+/* colors */
+/* font */
+/* spacers */
+/* Breakpoints */
+.notepad_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #2B2B2B;
+  border-radius: 20px;
+  width: 90vw;
+  max-width: 600px;
+  height: 80vh;
+  max-height: 300px;
+  padding: 15px;
+  position: fixed;
+  bottom: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.close_notepad {
+  opacity: 0;
+  transform: translate(-50%, 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 40px;
+}
+.header h3 {
+  font-size: clamp(11px, 1.8vw, 13px);
+  margin: 0;
+}
+.header .icons {
+  font-size: 20px;
+  cursor: pointer;
+}
+.header .icons .close {
+  transition: color 0.2s ease;
+  margin-left: 40px;
+  font-size: 25px;
+}
+.header .icons .close:hover {
+  color: rgba(255, 0, 0, 0.6509803922);
+}
+
+.notepad {
+  width: 100%;
+  height: calc(100% - 40px);
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-y: auto;
+  transition: border-color 0.3s ease;
+}
+.notepad:focus {
+  outline: none;
+}
+.notepad::-webkit-scrollbar {
+  width: 8px;
+}
+.notepad::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.notepad::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+  cursor: grab;
+}
+.notepad::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}/*# sourceMappingURL=styles.module.css.map */
