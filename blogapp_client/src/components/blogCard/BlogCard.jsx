@@ -2,7 +2,7 @@
 import styles from "./styles/styles.module.css";
 import BannerImage from "../BannerImage";
 import aboutUs from '../../assets/about_us.jpg'
-import { BiHeart, BiShare, BiDotsHorizontalRounded, BiSolidHeart } from "react-icons/bi";
+import { BiShare, BiDotsHorizontalRounded, BiSolidHeart } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { AboutExcerpt } from "../../pages/AboutUs";
 import { useEffect, useState } from "react";
