@@ -55,7 +55,7 @@ const scrollToTop = (e) => {
       </div>
       <div className={styles.fCopyright}>
         <p>&copy; Copyright 2024  LiveUp, All Rights Reserved.</p>
-        <p>UI inspired by <a href="https://assiagroupe.tech/noonpost/html/index.html">NoonPost</a></p>
+        <p>UI inspired by <b><a href="https://assiagroupe.tech/noonpost/html/index.html">NoonPost</a></b></p>
         {
         showBackToTop && <div className={styles.back_to_top}><a href="#" onClick={scrollToTop}>
         <IoMdArrowUp />
