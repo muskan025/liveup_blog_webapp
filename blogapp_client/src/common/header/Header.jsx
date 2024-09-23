@@ -13,7 +13,7 @@ const Header = () => {
    const [isHamburger, setIsHamburger] = useState(false)
    const location = useLocation()
   const username = author?.username
-  const profileImage = profileImg ? `http://localhost:8000/${profileImg}` : null
+  const profileImage = profileImg ? `https://liveup-blog-webapp.vercel.app/${profileImg}` : null
   const profileColors = getRandomProfileColor();
 
   function checkisAuth(e) {
