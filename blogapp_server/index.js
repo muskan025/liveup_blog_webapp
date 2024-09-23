@@ -43,10 +43,11 @@ app.use(
     saveUninitialized: false,
     store: store,
     cookie: { 
-      httpOnly: true,
-      secure: true,  
-      sameSite: 'lax',
+      httpOnly: false,
+     secure: true,
+     sameSite: "none",
       maxAge: 1000 * 60 * 60 * 24,
+      path: "/"
     },
   })
 );
