@@ -29,7 +29,7 @@ const BlogCards = ({ data, comp,scrollPosition }) => {
             const year = createdAtDate.getFullYear();
             const date = `${dateNum} ${month}, ${year}`;
             const image = `http://localhost:8000/${thumbnail}`;
-            const profileImage = `http://localhost:8000/${userId.profileImg}`;
+            const profileImage = `https://liveup-blog-webapp.vercel.app/${userId.profileImg}`;
             const blogData = { ...blog, date, thumbnail: image };
 
             return (
