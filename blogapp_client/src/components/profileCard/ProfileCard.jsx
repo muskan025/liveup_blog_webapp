@@ -25,7 +25,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
    const userId =  _id || author?.userId
    const authorProfile = pathname.includes(author.username)
      
-     const profileImage = authorProfile ? `http://localhost:8000/${author.profileImg}` : `http://localhost:8000/${user.profileImg}`
+     const profileImage = authorProfile ? `https://liveup-blog-webapp.vercel.app/${author.profileImg}` : `https://liveup-blog-webapp.vercel.app/${user.profileImg}`
  
      const [follow, { isFollowLoading }] = useFollowMutation()
   const [unfollow, { isunfollowLoading }] = useUnfollowMutation()
