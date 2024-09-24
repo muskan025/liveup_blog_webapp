@@ -27,7 +27,7 @@ const store = new mongoDbSession({
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors({
-  origin: 'https://liveup-frontend.vercel.app', 
+  origin: 'https://liveup.vercel.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -64,6 +64,6 @@ app.get('/', (req, res) => {
 }); 
  
 app.listen(PORT, () => {
-  console.log(clc.yellowBright(`https://liveup-frontend.vercel.app/`));
+  console.log(clc.yellowBright(`https://liveup.vercel.app/`));
   cleanUpBin();
 });
