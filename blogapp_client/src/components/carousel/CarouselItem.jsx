@@ -15,8 +15,8 @@ const CarouselItem = React.memo(({ blog, index, totalSlides,scrollPosition,handl
 
     const { date, imageUrl, profileImageUrl } = useMemo(() => ({
         date: formatDate(blog.createdAt),
-        imageUrl: `https://liveup-blog-webapp.vercel.app/${thumbnail}`,
-        profileImageUrl: `https://liveup-blog-webapp.vercel.app/${userId.profileImg}`
+        imageUrl: `https://liveup-api.vercel.app/${thumbnail}`,
+        profileImageUrl: `https://liveup-api.vercel.app/${userId.profileImg}`
       }), [blog]);
 
       function formatDate(createdAt){
