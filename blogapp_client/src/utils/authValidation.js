@@ -108,7 +108,7 @@ export const validateEmail = (email) => {
 
   export const validateImage = (file) => {
     const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webP'];
-    if (!allowedTypes.includes(file.type)) {
+    if (!allowedTypes.includes(file?.type)) {
       return {error:"Please upload a JPEG, PNG, or GIF image."}
     }
     return {error:null}
