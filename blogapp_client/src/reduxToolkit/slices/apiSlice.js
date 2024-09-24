@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://liveup-blog-webapp.vercel.app",
+        baseUrl: "https://liveup-api.vercel.app",
         credentials: 'include' }),
         tagTypes: ["AllBlogs","FollowList"],
     endpoints: (builder) => ({
