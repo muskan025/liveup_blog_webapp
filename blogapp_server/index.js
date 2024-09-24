@@ -44,8 +44,8 @@ app.use(
     store: store,
     cookie: { 
       httpOnly: true,
-     secure: true,
-     sameSite: "none",
+     secure: process.env.NODE_ENV === 'production',
+     sameSite: "lax",
       maxAge: 1000 * 60 * 60 * 24,
       path: "/",
      domain: process.env.COOKIE_DOMAIN
