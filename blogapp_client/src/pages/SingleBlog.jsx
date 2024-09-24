@@ -9,7 +9,7 @@ const SingleBlog = () => {
 
   const { state } = useLocation()
   const { _id, title, thumbnail, readTime, textBody, likesCount,likes, userId } = state
-   const profileImage = `https://liveup-blog-webapp.vercel.app/${userId.profileImg}`
+   const profileImage = `https://liveup-api.vercel.app/${userId.profileImg}`
 
  
    return (
