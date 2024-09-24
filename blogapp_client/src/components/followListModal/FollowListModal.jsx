@@ -128,7 +128,7 @@ const FollowListModal = ({ list, userId, setIsFollowing, setShowModal, setFollow
                         return (
                             <li key={_id}>
                                 <Link to={`/profile/${username}`} state={item} onClick={() => setShowModal(false)}>
-                                    <img src={`http://localhost:8000/${profileImg}`} alt="" />
+                                    <img src={`https://liveup-api.vercel.app/${profileImg}`} alt="" />
                                     <span>{item.username}</span>
                                 </Link>
                                 {list === 'Followings' && isOwnProfile && <div className={styles.btn}>
