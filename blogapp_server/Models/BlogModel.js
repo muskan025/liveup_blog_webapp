@@ -91,6 +91,34 @@ const Blog = class {
           ]);
 
           const blogs = [...blogsDb[0].data];
+
+           for (const blog of blogs) {
+      let updated = false;
+    
+      // Update image URLs in the textBody
+      if (blog.textBody) {
+        const updatedTextBody = blog.textBody.replace(
+          /http:\/\/localhost:8000/g,
+          'https://liveup-api.vercel.app/'
+        );
+        
+        if (updatedTextBody !== blog.textBody) {
+          blog.textBody = updatedTextBody;
+          updated = true;
+        }
+      }
+
+      if (updated) {
+        await blog.save();
+        updatedCount++;
+        console.log(`Updated blog: ${blog._id}`);
+      }
+    }
+
+    console.log(`Total blogs updated: ${updatedCount}`);
+  } catch (error) {
+    console.error('Error updating image URLs:', error);
+  } 
             const blogIds = blogs.map(blog => blog._id)
             const populatedBlogs = await BlogSchema.find({ _id: { $in: blogIds } })
           .populate('userId', 'name username profileImg bio niche followingsCount followersCount')
