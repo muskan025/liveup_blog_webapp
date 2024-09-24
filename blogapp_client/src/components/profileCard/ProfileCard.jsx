@@ -61,7 +61,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
         checkIsFollowing(response.data)
      }
  else if (response.status === 401){
-  console.log('place of origin:' ,response.message)
+  console.log('place of  fetchFollowingList:' ,response.message)
 
      toast.info(response.message)
  }
