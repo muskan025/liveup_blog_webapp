@@ -42,7 +42,7 @@ const [editorContent, setEditorContent] = useState(state?.textBody || "");
       formData.append('file', file);
 
       const response = await uploadImg(formData).unwrap()
-      const url = `http://localhost:8000/${response.url}` ;
+      const url = `https://liveup-api.vercel.app/${response.url}` ;
  
       const range = editorRef.current.getEditor().getSelection();
       editorRef.current.getEditor().insertEmbed(range.index, 'image', url);
