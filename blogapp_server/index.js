@@ -43,9 +43,11 @@ app.use(
     store: store,
     cookie: { 
       httpOnly: true,
-     secure: false,
+     secure: true,
       maxAge: 1000 * 60 * 60 * 24,
       path: "/",
+      sameSite: 'None',
+  domain: process.env.COOKIE_DOMAIN
     },
   })
 );
