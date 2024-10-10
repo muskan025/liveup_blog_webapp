@@ -4,7 +4,6 @@ import { useSelector } from "react-redux"
 import { toast } from "react-toastify"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { useState } from "react"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { getRandomProfileColor } from "../../utils/backgroundColorGenerator"
 

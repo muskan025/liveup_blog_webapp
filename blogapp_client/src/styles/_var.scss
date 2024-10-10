@@ -10,15 +10,14 @@
  $white:#ffffffde;
  $bg-color:#2B2B2B;
 
- 
  /* font */
- $heading-h1: clamp(28px, 5vw, 40px); // title in carousel
- $heading-h2: clamp(18px, 3vw, 22px); // title in card
- $text-xxs: clamp(10px, 1.5vw, 12px); // niche
- $text-xs: clamp(11px, 1.8vw, 13px); // user details
- $text-s: clamp(13px, 2vw, 15px); // nav + social links
- $f-l:900; //title
- $f-m:400; //excerpt
+ $heading-h1: clamp(28px, 5vw, 40px);  
+ $heading-h2: clamp(18px, 3vw, 22px);  
+ $text-xxs: clamp(10px, 1.5vw, 12px);  
+ $text-xs: clamp(11px, 1.8vw, 13px);  
+ $text-s: clamp(13px, 2vw, 15px); 
+ $f-l:900;  
+ $f-m:400;  
  $f-xs:600; 
  $f-s:700;
  
@@ -30,7 +29,4 @@
  $padding-inline: clamp(24px, 4vw, 48px);
  $gutter-x:1.5rem;
 
-/* Breakpoints */
-$mobile: 480px;
-$tablet: 768px;
-$desktop: 1024px;
+ 

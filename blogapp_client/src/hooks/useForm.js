@@ -7,8 +7,7 @@ export const useForm = (initialState) => {
 
 
     function handleChange(e) {
-
-        // setErrors(initialState)
+ 
         const { name, value, files, type } = e.target
         setFormData((prev) => ({
             ...prev,

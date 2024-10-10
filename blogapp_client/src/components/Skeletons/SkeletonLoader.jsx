@@ -24,16 +24,6 @@ const SkeletonLoader = () => {
           </div>
         </div>
         <div className={blogCardsStyles.grid_container} >
-          {/* {Array(8).fill().map((_, index) => {
-            return (<div className={`${blogCardStyles.masonry_item} ${blogCardStyles.skeleton_item}`} key={index}>
-              <Skeleton height={250} width={200} style={{ marginBottom: '6px', borderRadius: '20px' }} />
-              <Skeleton count={3} width={200} style={{ marginBottom: '4px' }} />
-              <Skeleton circle width={40} height={40} />
-              <Skeleton width={100} style={{ marginLeft: '10px' }} />
-            </div>)
-          }
-          )
-          } */}
         </div>
       </>
     ),
@@ -49,7 +39,6 @@ const SkeletonLoader = () => {
           <Skeleton height={50} width='70vw' style={{ marginBottom: '90px' }} />
           <Skeleton count={3} width='40vw' style={{ marginBottom: '4px', }} />
         </div>
-        {/* {Array(8).fill().map((_, index) => <SkeletonCard key={index} />)} */}
       </>
     ),
     '/blog': (

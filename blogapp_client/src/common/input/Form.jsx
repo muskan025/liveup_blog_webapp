@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { BiImageAdd } from "react-icons/bi"
 import styles from "./styles/styles.module.css"
 import indexStyle from "../../styles/index.module.scss" 

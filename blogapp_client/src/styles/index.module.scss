@@ -1,6 +1,4 @@
-@import "./var" ;
-@import "./mixin" ;
-  
+@import "./var" ; 
   
   *,*::after,*::before{
     margin: 0;
@@ -158,7 +156,7 @@ a{
 .explore_blogs {
   width: 81vw;
   margin-inline: auto;
-  text-align: center; /* Center all text content */
+  text-align: center;  
 
   .searchbar {
     padding: 20px 20px 0 20px;
@@ -200,14 +198,13 @@ a{
     margin-top: 20px;  
   }
   
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     & {
-      width: 90vw; /* Slightly wider on smaller screens */
+      width: 90vw;  
     }
     
       p {
-       padding: 0 15px; /* Add some padding on smaller screens */
+       padding: 0 15px;  
     }
   }
 }

@@ -1,8 +1,6 @@
-/* eslint-disable react/prop-types */
 
 import { BsX } from 'react-icons/bs'
 import { FileField, InputField } from '../../common/input/Form'
-import { useEffect, useState } from 'react'
 import { useForm } from "../../hooks/useForm";
 import { toast } from 'react-toastify'
 import { validateBio, validateImage, validateNiche } from '../../utils/authValidation';

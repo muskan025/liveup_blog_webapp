@@ -2,7 +2,7 @@
 import styles from "./styles/styles.module.css"
 import { Link } from "react-router-dom"
 import { InputField } from "../../common/input/Form"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import { useGetFollowerListMutation, useGetFollowingListMutation, useUnfollowMutation } from "../../reduxToolkit/slices/apiSlice"
 import { toast } from "react-toastify"

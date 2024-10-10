@@ -197,8 +197,7 @@ export const api = createApi({
                 url:"/follow/following",
                 method: "POST",
                 body:{userId}
-            }),
-            // transformResponse: (response) => response.data,
+            }),  
             providesTags: ['FollowList']
         }),
         getFollowerList: builder.mutation({
@@ -207,7 +206,6 @@ export const api = createApi({
                 method:"POST",
                 body:{userId}
             }),
-            // transformResponse: (response) => response.data,
              providesTags: ['FollowList']
         }),
         unfollow: builder.mutation({

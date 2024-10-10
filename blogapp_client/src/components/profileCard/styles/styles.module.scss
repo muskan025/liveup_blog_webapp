@@ -1,7 +1,5 @@
 @import "../../../styles/var";
 
- 
-
     .user_details_container{
     
       display: flex;
@@ -101,44 +99,8 @@
            text-wrap: balance;
            font-size: $text-s;
             }
-    
             
-          .social_media_icons_container{
-            list-style-type: none;
-            gap: 5px;
-            display: flex;
-
-             a:hover{
-            color: $f-color;
-               }
-             }
-    
-        .social_media_icons{
-          border-radius:50%;
-          padding-block: 5px;
-          box-shadow: 0 4px 10px rgba(221, 220, 220, 0.281);
-          
-          svg{
-            vertical-align: middle; 
-          }
-        }
-        .facebook{
-          background-color:#3b5998;
-        }
-        .instagram{
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-          }
-          
-        .x{
-          // background-color: #1D9BF0;
-          background-color: #000000;
-        } 
-        .youtube{
-          background-color: #FF0000;
-        }
       }
-    
-    
 
     }
 

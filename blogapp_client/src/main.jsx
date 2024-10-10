@@ -10,12 +10,6 @@ import { persistStore } from 'redux-persist'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { lazy, Suspense } from 'react'
 import SkeletonLoader from './components/Skeletons/SkeletonLoader.jsx'
- 
-function wait() { 
-  return new Promise((res) => {
-    setTimeout(() => { res() }, 8000)
-  })
-}
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const AboutUs = lazy(() => import('./pages/AboutUs.jsx'));

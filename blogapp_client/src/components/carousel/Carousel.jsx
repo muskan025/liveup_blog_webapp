@@ -1,10 +1,6 @@
-/* eslint-disable react/prop-types */
-import { UserDetails } from "../blogCard/BlogCard"
-import { Link } from "react-router-dom"
+
 import { useCallback, useEffect, useState } from "react"
-import { PiCaretCircleLeftLight, PiCaretCircleRightLight } from "react-icons/pi"
-import SkeletonSlide from "../Skeletons/SkeletonSlide"
-import { LazyLoadImage,trackWindowScroll } from 'react-lazy-load-image-component';
+import {trackWindowScroll } from 'react-lazy-load-image-component';
 import CarouselItem from "./CarouselItem"
 import styles from "../blogCard/styles/styles.module.scss"
 
