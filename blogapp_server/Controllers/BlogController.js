@@ -8,17 +8,13 @@ const BlogSchema = require("../Schemas/BlogSchema")
 const isAuth = require("../Middlewares/isAuth")
 
 const BlogRouter = express.Router()
-
-// Blog.deleteBlogs()
-
+ 
 BlogRouter.post("/create-blog",isAuth,async(req,res)=>{
 
     const {title,textBody,readTime,thumbnail} = req.body
-    
     const creationDateTime = Date.now()
     const userId = req.session.user.userId
-     
-    //to validate the blog
+
     try {
         await BlogDataValidator({ title, textBody,readTime,thumbnail });
       } catch (error) {
@@ -29,8 +25,6 @@ BlogRouter.post("/create-blog",isAuth,async(req,res)=>{
         }); 
       }
     
-
-    //to verify if the correct user is creating the blogs
     try{
         const userDb = await User.verifyUserId({userId})
     }
@@ -41,7 +35,6 @@ BlogRouter.post("/create-blog",isAuth,async(req,res)=>{
         })
     }
 
-//to create blog
     try{
 
     const blogObj = new Blog({title,textBody,creationDateTime,readTime,thumbnail,userId})
@@ -139,7 +132,6 @@ BlogRouter.put("/edit-blog/:blogId",isAuth,async(req,res)=>{
     const blogId = req.params.blogId
     const userId = req.session.user.userId
  
-   //to validate the blog
    try {
      await BlogDataValidator({ title, textBody,readTime,thumbnail }); 
   } catch (error) {
@@ -161,7 +153,7 @@ try{
           message: "You're UnAuthorized to proceed",
       })
   }  
-  //Don't allow user to edit after 30 mins
+ 
  const timeDiff = new Date( (String(Date.now()) - blogDb.creationDateTime)).getTime()/(1000*60)
 
    if(timeDiff > 30){

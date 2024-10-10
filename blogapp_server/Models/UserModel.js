@@ -58,7 +58,6 @@ const User = class {
     });
   }
 
-  //To prevent user registering with email/username that already exists in db
   static findUsernameOrEmailExist({ email, username }) {
     return new Promise(async (resolve, reject) => {
       try {
@@ -132,22 +131,6 @@ const User = class {
       }
     });
   }
-
-  // static async deleteUsers() {
-
-  //   try{
-      
-  //     const deletedUsers = await FollowSchema.deleteMany({})
-
-  //     if(!deletedUsers) throw new Error ("couldn't delete")
-
-  //       return deletedUsers
-  //   }
-  //   catch (error) {
-  //     throw error;
-  //   }
-  
-  // }
  
 }; 
 

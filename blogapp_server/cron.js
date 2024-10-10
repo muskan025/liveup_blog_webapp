@@ -9,13 +9,11 @@ const cleanUpBin = ()=>{
         const deletedBlogs = await BlogSchema.find({isDeleted:true})
 
         if(deletedBlogs.length>0){
-
             deletedBlogs.map(blog=>{
 
                 const diff = new Date(Date.now() - blog.deletionDateTime).getTime()/(1000 * 60* 60 * 24  )
-
                 
-                if(diff > 0.005){
+                if(diff > 30){
 
                     BlogSchema.findOneAndDelete({_id:blog._id}).then(()=>{
                      }).catch((err)=>{
