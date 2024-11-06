@@ -11,7 +11,7 @@ import { useForm } from "../../hooks/useForm"
 const FollowListModal = ({ list, userId, setIsFollowing, setShowModal, setFollowCounts }) => {
 
     const { author } = useSelector((state) => state.userData)
-    const isOwnProfile = author.userId === userId
+    const isOwnProfile = author?.userId === userId
     const [displayedList, setDisplayedList] = useState([])
     const [fullList, setFullList] = useState([])
     const initialState = { searchQuery: '' }
