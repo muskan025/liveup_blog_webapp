@@ -23,9 +23,9 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
   const { username, profileImg, niche, bio, _id,} = user
   const { pathname } = useLocation();
    const userId =  _id || author?.userId
-   const authorProfile = pathname.includes(author.username)
+   const authorProfile = pathname.includes(author?.username)
      
-     const profileImage = authorProfile ? `https://liveup-api.vercel.app/${author.profileImg}` : `https://liveup-api.vercel.app/${user.profileImg}`
+     const profileImage = authorProfile ? `https://liveup-api.vercel.app/${author?.profileImg}` : `https://liveup-api.vercel.app/${user?.profileImg}`
  
      const [follow, { isFollowLoading }] = useFollowMutation()
   const [unfollow, { isunfollowLoading }] = useUnfollowMutation()
@@ -167,7 +167,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
   return (
     <section className={styles.user_details_container}>
       <Link to={`/profile/${username}`} state={user} >
-        { author.profileImg || profileImg ?
+        { author?.profileImg || profileImg ?
           <img src={profileImage} alt="Profile Image" className={styles.profileImg} /> :
           <div className={styles.defaultImg}
           style={{ "background": `linear-gradient(135deg, ${profileColors[0]} 0%, ${profileColors[1]} 100%)` }}>
@@ -178,7 +178,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
         }
       </Link>
       <div className={styles.user_details}>
-        <p className={styles.name}>{isOwnProfile ? author.username : username}</p>
+        <p className={styles.name}>{isOwnProfile ? author?.username : username}</p>
         {articleCount && <div className={styles.article_followlist_container}>
           <span>{blogsCount} Blogs</span>
           <span className={styles.followList} onClick={() => setShowFollowingModal(true)}>{followCounts.followingCount } Followings</span>
@@ -196,7 +196,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
         <div className={styles.profile_btns}>
           {!isOwnProfile && <button className={styles.niche} onClick={!isFollowing ? handleFollow : handleUnfollow}>{!isFollowing ? 'Follow' : 
             'Unfollow'}</button>}
-          <span className={styles.niche}>{(!author.niche ? 'Niche' : (isOwnProfile ? author.niche : !niche? 'Niche' : niche)) }</span>
+          <span className={styles.niche}>{(!author?.niche ? 'Niche' : (isOwnProfile ? author?.niche : !niche? 'Niche' : niche)) }</span>
           {isOwnProfile && <button className={styles.niche} onClick={handleEditProfile}>Edit Profile</button>}
 
           <Modal isOpen={editProfile} onClose={closeEditProfile}>
@@ -214,7 +214,7 @@ const ProfileCard = ({ articleCount = true, user, blogsCount,comp }) => {
           )}
 
         </div>
-        <p className={styles.bio}>{isOwnProfile ? author.bio : bio}</p>
+        <p className={styles.bio}>{isOwnProfile ? author?.bio : bio}</p>
 
       </div>
     </section>
